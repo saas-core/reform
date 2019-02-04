@@ -1,0 +1,60 @@
+{
+  "name": "@workpop/helium-forms",
+  "version": "0.0.0",
+  "description": "Form wrapper around Formik",
+  "keywords": [
+    "React"
+  ],
+  "author": "Abhi Aiyer <aaiyer@csod.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://aaiyer@bitbucket.csod.com/scm/neon/helium.git"
+  },
+  "scripts": {
+    "test": "jest --env=jsdom --verbose=false",
+    "test:watch": "jest --env=jsdom --verbose=false --watch"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "<rootDir>/__tests__/*.test.(ts|js)?(x)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "jest": "^23.6.0",
+    "jest-dom": "^2.1.1",
+    "react-testing-library": "^5.2.3",
+    "ts-jest": "^23.10.4"
+  },
+  "peerDependencies": {
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2"
+  },
+  "dependencies": {
+    "formik": "^1.3.2"
+  }
+}
