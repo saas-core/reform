@@ -1,5 +1,5 @@
 {
-  "name": "@workpop/helium-forms",
+  "name": "@saascore/forms",
   "version": "0.0.0",
   "description": "Form wrapper around Formik",
   "keywords": [
