@@ -9,12 +9,12 @@ import Checkbox from '../src/Checkbox';
 import CheckboxGroup from '../src/CheckboxGroup';
 import TestCheckboxGroup from '../__tests__/utils/TestCheckboxGroup';
 import TextArea from '../src/TextArea';
-import WorkpopInput from './workpop-forms/components/Input';
-import WorkpopTextArea from './workpop-forms/components/TextArea';
-import WorkpopCheckboxGroup from './workpop-forms/components/CheckboxGroup';
-import WorkpopCheckbox from './workpop-forms/components/Checkbox';
-import WorkpopRadio from './workpop-forms/components/Radio';
-import WorkpopRadioGroup from './workpop-forms/components/RadioGroup';
+import WorkpopInput from './styled-forms/components/Input';
+import WorkpopTextArea from './styled-forms/components/TextArea';
+import WorkpopCheckboxGroup from './styled-forms/components/CheckboxGroup';
+import WorkpopCheckbox from './styled-forms/components/Checkbox';
+import WorkpopRadio from './styled-forms/components/Radio';
+import WorkpopRadioGroup from './styled-forms/components/RadioGroup';
 
 const stories = storiesOf('Forms', module);
 
