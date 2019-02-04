@@ -5,7 +5,6 @@
   "keywords": [
     "React"
   ],
-  "author": "Abhi Aiyer <aaiyer@csod.com>",
   "license": "MIT",
   "main": "lib/index.js",
   "directories": {
@@ -15,9 +14,6 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "registry": "https://registry.yarnpkg.com"
-  },
   "repository": {
     "type": "git",
     "url": "https://aaiyer@bitbucket.csod.com/scm/neon/helium.git"
