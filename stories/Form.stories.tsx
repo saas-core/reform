@@ -6,7 +6,6 @@ import Select from '../src/Select';
 import Radio from '../src/Radio';
 import RadioGroup from '../src/RadioGroup';
 import Checkbox from '../src/Checkbox';
-import CheckboxGroup from '../src/CheckboxGroup';
 import TestCheckboxGroup from '../__tests__/utils/TestCheckboxGroup';
 import TextArea from '../src/TextArea';
 import WorkpopInput from './styled-forms/components/Input';
