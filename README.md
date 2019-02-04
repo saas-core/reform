@@ -1,4 +1,4 @@
-# `reform`
+# reform
 This library provides a set of components to be used as building blocks for your form. It is a compilation of common form controls built on top of [Formik](https://jaredpalmer.com/formik/) with semantic HMTL and accessibility in mind while leaving styling up to you.
 
 ## Usage
