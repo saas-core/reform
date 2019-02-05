@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Field, FieldConfig } from 'formik';
+import { Field, FieldConfig, FieldProps } from 'formik';
 import Label from './Label';
 
 export interface SelectOption {
@@ -17,15 +17,18 @@ export type SelectProps = {
   labelClassName?: string;
 } & FieldConfig;
 
-export default function Select({
-  name,
+type SelectInnerProps = FieldProps & SelectProps;
+
+function SelectInner({
+  field,
+  form,
+  id,
   label,
-  options,
-  placeholder,
-  id = name,
-  className,
   labelClassName,
-}: SelectProps) {
+  placeholder,
+  options,
+  ...rest
+}: SelectInnerProps) {
   return (
     <React.Fragment>
       {label && (
@@ -33,12 +36,16 @@ export default function Select({
           {label}
         </Label>
       )}
-      <Field component="select" className={className} name={name} id={id}>
+      <select id={id} {...field} {...rest}>
         {placeholder && <option value="">{placeholder}</option>}
         {options.map(renderOption)}
-      </Field>
+      </select>
     </React.Fragment>
   );
+}
+
+export default function Select({ name, id = name, ...rest }: SelectProps) {
+  return <Field component={SelectInner} name={name} id={id} {...rest} />;
 }
 
 function renderOption({ label, value }: SelectOption) {

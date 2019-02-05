@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Field, FieldConfig } from 'formik';
+import { Field, FieldConfig, FieldProps } from 'formik';
 import Label from './Label';
 
 export type TextAreaProps = {
@@ -8,16 +8,19 @@ export type TextAreaProps = {
   id?: string;
   labelClassName?: string;
 } & JSX.IntrinsicElements['textarea'] & {
-    ref?: any; // TODO see if we can avoid TS error caused by JSX.IntrinsicElements['textarea']['ref'] clashing with Field typedef
-  } & FieldConfig;
+  ref?: any; // TODO see if we can avoid TS error caused by JSX.IntrinsicElements['textarea']['ref'] clashing with Field typedef
+} & FieldConfig;
 
-export default function TextArea({
-  name,
+type TextAreaInnerProps = FieldProps & TextAreaProps;
+
+function TextAreaInner({
+  field,
+  form,
+  id,
   label,
-  id = name,
   labelClassName,
   ...rest
-}: TextAreaProps) {
+}: TextAreaInnerProps) {
   return (
     <React.Fragment>
       {label && (
@@ -25,7 +28,11 @@ export default function TextArea({
           {label}
         </Label>
       )}
-      <Field component="textarea" name={name} id={id} {...rest} />
+      <textarea id={id} {...field} {...rest} />
     </React.Fragment>
   );
+}
+
+export default function TextArea({ name, id = name, ...rest }: TextAreaProps) {
+  return <Field component={TextAreaInner} name={name} id={id} {...rest} />;
 }

@@ -8,12 +8,13 @@ import RadioGroup from '../src/RadioGroup';
 import Checkbox from '../src/Checkbox';
 import TestCheckboxGroup from '../__tests__/utils/TestCheckboxGroup';
 import TextArea from '../src/TextArea';
-import WorkpopInput from './styled-forms/components/Input';
-import WorkpopTextArea from './styled-forms/components/TextArea';
-import WorkpopCheckboxGroup from './styled-forms/components/CheckboxGroup';
-import WorkpopCheckbox from './styled-forms/components/Checkbox';
-import WorkpopRadio from './styled-forms/components/Radio';
-import WorkpopRadioGroup from './styled-forms/components/RadioGroup';
+import StyledInput from './styled-forms/components/Input';
+import StyledTextArea from './styled-forms/components/TextArea';
+import StyledCheckboxGroup from './styled-forms/components/CheckboxGroup';
+import StyledCheckbox from './styled-forms/components/Checkbox';
+import StyledRadio from './styled-forms/components/Radio';
+import StyledRadioGroup from './styled-forms/components/RadioGroup';
+import { RichText } from '../src/RichText';
 
 const stories = storiesOf('Forms', module);
 
@@ -43,6 +44,7 @@ const initialValues = {
   boolean: '',
   singleConfirm: '',
   languages: [],
+  richText: '<p>Lorem ipsum</p><p>Foo Bar</p>'
 };
 
 const radioOptions = [
@@ -101,21 +103,22 @@ stories
         />
         <TestCheckboxGroup options={checkboxOptions} label="Language" name="languages" />
         <br />
+        <RichText name="richText" label="Rich Text" />
       </TestForm>
     );
   })
-  .add('Workpop Forms Example', function() {
+  .add('Styled Forms Example', function() {
     return (
       <TestForm initialValues={initialValues}>
-        <WorkpopInput label="Name" name="name" />
+        <StyledInput label="Name" name="name" />
         <br />
-        <WorkpopInput label="Age" name="age" type="number" />
+        <StyledInput label="Age" name="age" type="number" />
         <br />
-        <WorkpopInput label="Password" name="password" type="password" />
+        <StyledInput label="Password" name="password" type="password" />
         <br />
-        <WorkpopInput label="Email" name="email" type="email" />
+        <StyledInput label="Email" name="email" type="email" />
         <br />
-        <WorkpopTextArea label="Text area" name="text" />
+        <StyledTextArea label="Text area" name="text" />
         <br />
         <Select
           label="Color"
@@ -124,14 +127,14 @@ stories
           placeholder="Pick a color"
         />
         <h4>Radio</h4>
-        <WorkpopRadio label="Are you cool?" name="cool" value="IS_COOL" />
-        <WorkpopRadioGroup options={radioOptions} label="Yes or no?" name="boolean" />
+        <StyledRadio label="Are you cool?" name="cool" value="IS_COOL" />
+        <StyledRadioGroup options={radioOptions} label="Yes or no?" name="boolean" />
         <h4>Checkbox</h4>
-        <WorkpopCheckbox
+        <StyledCheckbox
           label="Check this to confirm?"
           name="singleConfirm"
         />
-        <WorkpopCheckboxGroup options={checkboxOptions} label="Language" name="languages" />
+        <StyledCheckboxGroup options={checkboxOptions} label="Language" name="languages" />
         <br />
       </TestForm>
     );

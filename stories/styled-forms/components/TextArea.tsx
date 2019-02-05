@@ -6,7 +6,7 @@ import TextArea, { TextAreaProps } from '../../../src/TextArea';
 import textAreaStyles from '../stylesheets/textArea';
 
 
-export default function WorkpopTextArea({
+export default function StyledTextArea({
   className,
   ...rest
 }: TextAreaProps) {

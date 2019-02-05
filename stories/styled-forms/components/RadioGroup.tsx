@@ -1,12 +1,12 @@
 import * as React from 'react';
 import RadioGroup from '../../../src/RadioGroup';
-import WorkpopRadio from './Radio';
+import StyledRadio from './Radio';
 
-export default function WorkpopRadioGroup(props) {
+export default function StyledRadioGroup(props) {
   return (
     <RadioGroup
       {...props}
-      RadioComponent={WorkpopRadio}
+      RadioComponent={StyledRadio}
     />
   );
 }

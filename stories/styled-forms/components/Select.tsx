@@ -5,7 +5,7 @@ import inputStyles from '../stylesheets/input';
 import labelStyles from '../stylesheets/label';
 
 
-export default function WorkpopSelect({
+export default function StyledSelect({
   className,
   ...rest
 }: InputProps) {
