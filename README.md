@@ -35,7 +35,7 @@ A container component built on top of Formik's `<FieldArray />` to be used to re
 
 #### Example
 ```typescript jsx
-import CheckboxGroup, { CheckboxItemSelectAll, CheckboxItem } from '@workpop/helium-reform/lib/CheckboxGroup';
+import CheckboxGroup, { CheckboxItemSelectAll, CheckboxItem } from '@saascore/forms/lib/CheckboxGroup';
 
 const checkboxOptions = [
   {

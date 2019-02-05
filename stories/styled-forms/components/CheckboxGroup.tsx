@@ -22,7 +22,7 @@ function CustomCheckbox({
   );
 }
 
-export default function WorkpopCheckboxGroup({
+export default function StyledCheckboxGroup({
   options,
   ...rest
 }: {
