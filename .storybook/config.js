@@ -11,7 +11,6 @@ addDecorator(
 addDecorator(checkA11y);
 
 // automatically import all files ending in *.stories.tsx
-console.log(20);
 const req = require.context('../stories', true, /.stories.tsx/);
 function loadStories() {
   req.keys().forEach((filename) => req(filename));
